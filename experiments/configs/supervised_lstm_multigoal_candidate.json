@@ -1,0 +1,37 @@
+{
+  "experiment_name": "supervised_lstm_multigoal_candidate_v1",
+  "seed": 42,
+  "data": {
+    "grid_size_train": 8,
+    "grid_size_test": 8,
+    "obstacle_count": 2,
+    "number_of_goals": 3,
+    "observation_crop_size": 5,
+    "episode_horizon_min": 30,
+    "episode_horizon_max": 60,
+    "sequence_length": 4,
+    "split": {
+      "train_episodes": 1500,
+      "val_episodes": 300,
+      "test_episodes": 300
+    },
+    "ood": {
+      "enabled": true,
+      "grid_size_test": 10,
+      "obstacle_count": 4,
+      "number_of_goals": 3,
+      "test_episodes": 300
+    }
+  },
+  "model": {
+    "embedding_size": 64,
+    "lstm_hidden_size": 64,
+    "conv_depth": 3
+  },
+  "train": {
+    "batch_size": 128,
+    "epochs": 4,
+    "learning_rate": 0.001,
+    "optimizer": "adam"
+  }
+}

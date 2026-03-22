@@ -1,0 +1,41 @@
+{
+  "experiment_name": "supervised_vs_rotation_vs_contrastive_quickcheck_v1",
+  "proposal_alignment": "H1 self-supervised pretraining vs supervised under partial observability",
+  "seed": 42,
+  "device_policy": "cuda_then_mps_then_cpu",
+  "data": {
+    "split": {
+      "train_episodes": 300,
+      "val_episodes": 80,
+      "test_episodes": 80
+    },
+    "grid_size_train": 8,
+    "grid_size_test": 8,
+    "obstacle_count": 1,
+    "observation_crop_size": 5,
+    "episode_horizon_min": 40,
+    "episode_horizon_max": 60,
+    "ood": {
+      "enabled": true,
+      "grid_size_test": 10,
+      "obstacle_count": 2,
+      "test_episodes": 80
+    }
+  },
+  "model": {
+    "embedding_size": 64,
+    "projection_size": 32,
+    "contrastive_temperature": 0.2
+  },
+  "train": {
+    "batch_size": 64,
+    "supervised_epochs": 4,
+    "rotation_ssl_pretrain_epochs": 8,
+    "contrastive_ssl_pretrain_epochs": 8,
+    "fine_tune_epochs": 4,
+    "learning_rate_supervised": 0.001,
+    "learning_rate_ssl": 0.001,
+    "learning_rate_fine_tune_encoder": 0.0005,
+    "learning_rate_fine_tune_head": 0.001
+  }
+}

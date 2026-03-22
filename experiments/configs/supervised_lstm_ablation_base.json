@@ -1,0 +1,37 @@
+{
+  "experiment_name": "supervised_lstm_ablation_base_v1",
+  "proposal_alignment": "Ablation grid for supervised LSTM under partial observability",
+  "seed": 42,
+  "device_policy": "cuda_then_mps_then_cpu",
+  "data": {
+    "split": {
+      "train_episodes": 600,
+      "val_episodes": 120,
+      "test_episodes": 120
+    },
+    "grid_size_train": 8,
+    "grid_size_test": 8,
+    "obstacle_count": 1,
+    "observation_crop_size": 5,
+    "episode_horizon_min": 40,
+    "episode_horizon_max": 60,
+    "sequence_length": 4,
+    "ood": {
+      "enabled": true,
+      "grid_size_test": 10,
+      "obstacle_count": 2,
+      "test_episodes": 120
+    }
+  },
+  "model": {
+    "embedding_size": 64,
+    "lstm_hidden_size": 64,
+    "conv_depth": 3
+  },
+  "train": {
+    "epochs": 3,
+    "batch_size": 64,
+    "optimizer": "adam",
+    "learning_rate": 0.001
+  }
+}

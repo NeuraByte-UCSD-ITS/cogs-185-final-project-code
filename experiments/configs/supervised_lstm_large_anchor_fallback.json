@@ -1,0 +1,37 @@
+{
+  "experiment_name": "supervised_lstm_large_anchor_fallback_v1",
+  "proposal_alignment": "Fallback large-scale anchor when 10k run is too slow in local CPU sandbox",
+  "seed": 42,
+  "device_policy": "cuda_then_mps_then_cpu",
+  "data": {
+    "split": {
+      "train_episodes": 5000,
+      "val_episodes": 1000,
+      "test_episodes": 1000
+    },
+    "grid_size_train": 8,
+    "grid_size_test": 8,
+    "obstacle_count": 1,
+    "observation_crop_size": 9,
+    "episode_horizon_min": 40,
+    "episode_horizon_max": 60,
+    "sequence_length": 4,
+    "ood": {
+      "enabled": true,
+      "grid_size_test": 10,
+      "obstacle_count": 2,
+      "test_episodes": 1000
+    }
+  },
+  "model": {
+    "embedding_size": 128,
+    "lstm_hidden_size": 64,
+    "conv_depth": 3
+  },
+  "train": {
+    "epochs": 2,
+    "batch_size": 128,
+    "optimizer": "adam",
+    "learning_rate": 0.001
+  }
+}

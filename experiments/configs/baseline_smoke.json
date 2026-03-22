@@ -1,0 +1,38 @@
+{
+  "experiment_name": "baseline_smoke_v1",
+  "proposal_alignment": "Comparing supervised/self-supervised/recurrent under partial observability",
+  "seed": 42,
+  "device_policy": "cuda_then_mps_then_cpu",
+  "data": {
+    "mode": "procedural_gridworld",
+    "split": {
+      "train_episodes": 1000,
+      "val_episodes": 200,
+      "test_episodes": 200
+    },
+    "grid_size_train": 8,
+    "grid_size_test": 8,
+    "obstacle_count": 1,
+    "observation_crop_size": 5,
+    "episode_horizon_min": 40,
+    "episode_horizon_max": 60
+  },
+  "model": {
+    "representation_method": "supervised_baseline",
+    "sequence_head": "feedforward",
+    "encoder_embedding_dim": 64
+  },
+  "train": {
+    "epochs": 5,
+    "batch_size": 64,
+    "optimizer": "adam",
+    "learning_rate": 0.001
+  },
+  "eval": {
+    "metrics": [
+      "next_action_accuracy",
+      "success_rate",
+      "avg_steps_to_goal"
+    ]
+  }
+}

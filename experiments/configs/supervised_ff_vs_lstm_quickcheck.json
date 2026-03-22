@@ -1,0 +1,27 @@
+{
+  "experiment_name": "supervised_ff_vs_lstm_quickcheck_v1",
+  "proposal_alignment": "H2 recurrent architectures vs feedforward under partial observability",
+  "seed": 42,
+  "device_policy": "cuda_then_mps_then_cpu",
+  "data": {
+    "mode": "procedural_gridworld",
+    "split": {
+      "train_episodes": 300,
+      "val_episodes": 80,
+      "test_episodes": 80
+    },
+    "grid_size_train": 8,
+    "grid_size_test": 8,
+    "obstacle_count": 1,
+    "observation_crop_size": 5,
+    "episode_horizon_min": 40,
+    "episode_horizon_max": 60,
+    "sequence_length": 4
+  },
+  "train": {
+    "epochs": 3,
+    "batch_size": 64,
+    "optimizer": "adam",
+    "learning_rate": 0.001
+  }
+}

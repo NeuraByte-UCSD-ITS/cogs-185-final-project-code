@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="490.0" y="30" text-anchor="middle" font-size="20" font-family="Arial">Three-way comparison (large split, multi-seed)</text>
+<line x1="80" y1="410" x2="950" y2="410" stroke="#222" stroke-width="2"/>
+<line x1="80" y1="60" x2="80" y2="410" stroke="#222" stroke-width="2"/>
+<line x1="75" y1="410.00" x2="80" y2="410.00" stroke="#444" stroke-width="1"/>
+<text x="70" y="414.00" text-anchor="end" font-size="12" font-family="Arial" fill="#333">0.0</text>
+<line x1="80" y1="410.00" x2="950" y2="410.00" stroke="#EEE" stroke-width="1"/>
+<line x1="75" y1="346.36" x2="80" y2="346.36" stroke="#444" stroke-width="1"/>
+<text x="70" y="350.36" text-anchor="end" font-size="12" font-family="Arial" fill="#333">0.1</text>
+<line x1="80" y1="346.36" x2="950" y2="346.36" stroke="#EEE" stroke-width="1"/>
+<line x1="75" y1="282.73" x2="80" y2="282.73" stroke="#444" stroke-width="1"/>
+<text x="70" y="286.73" text-anchor="end" font-size="12" font-family="Arial" fill="#333">0.2</text>
+<line x1="80" y1="282.73" x2="950" y2="282.73" stroke="#EEE" stroke-width="1"/>
+<line x1="75" y1="219.09" x2="80" y2="219.09" stroke="#444" stroke-width="1"/>
+<text x="70" y="223.09" text-anchor="end" font-size="12" font-family="Arial" fill="#333">0.3</text>
+<line x1="80" y1="219.09" x2="950" y2="219.09" stroke="#EEE" stroke-width="1"/>
+<line x1="75" y1="155.45" x2="80" y2="155.45" stroke="#444" stroke-width="1"/>
+<text x="70" y="159.45" text-anchor="end" font-size="12" font-family="Arial" fill="#333">0.4</text>
+<line x1="80" y1="155.45" x2="950" y2="155.45" stroke="#EEE" stroke-width="1"/>
+<line x1="75" y1="91.82" x2="80" y2="91.82" stroke="#444" stroke-width="1"/>
+<text x="70" y="95.82" text-anchor="end" font-size="12" font-family="Arial" fill="#333">0.5</text>
+<line x1="80" y1="91.82" x2="950" y2="91.82" stroke="#EEE" stroke-width="1"/>
+<rect x="180.00" y="166.12" width="42.00" height="243.88" fill="#4C78A8"/>
+<text x="201.00" y="160.12" text-anchor="middle" font-size="11" font-family="Arial" fill="#111">0.383</text>
+<rect x="225.00" y="199.47" width="42.00" height="210.53" fill="#F58518"/>
+<text x="246.00" y="193.47" text-anchor="middle" font-size="11" font-family="Arial" fill="#111">0.331</text>
+<text x="225.00" y="434" text-anchor="middle" font-size="12" font-family="Arial">Supervised</text>
+<rect x="470.00" y="196.40" width="42.00" height="213.60" fill="#4C78A8"/>
+<text x="491.00" y="190.40" text-anchor="middle" font-size="11" font-family="Arial" fill="#111">0.336</text>
+<rect x="515.00" y="212.18" width="42.00" height="197.82" fill="#F58518"/>
+<text x="536.00" y="206.18" text-anchor="middle" font-size="11" font-family="Arial" fill="#111">0.311</text>
+<text x="515.00" y="434" text-anchor="middle" font-size="12" font-family="Arial">Rotation SSL</text>
+<rect x="760.00" y="207.33" width="42.00" height="202.67" fill="#4C78A8"/>
+<text x="781.00" y="201.33" text-anchor="middle" font-size="11" font-family="Arial" fill="#111">0.318</text>
+<rect x="805.00" y="224.57" width="42.00" height="185.43" fill="#F58518"/>
+<text x="826.00" y="218.57" text-anchor="middle" font-size="11" font-family="Arial" fill="#111">0.291</text>
+<text x="805.00" y="434" text-anchor="middle" font-size="12" font-family="Arial">Contrastive-lite SSL</text>
+<rect x="730" y="70" width="14" height="14" fill="#4C78A8"/>
+<text x="752" y="82" font-size="12" font-family="Arial">IID mean accuracy</text>
+<rect x="730" y="92" width="14" height="14" fill="#F58518"/>
+<text x="752" y="104" font-size="12" font-family="Arial">OOD mean accuracy</text>
+</svg>

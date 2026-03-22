@@ -1,0 +1,49 @@
+{
+  "experiment_name": "four_way_ssl_compare_quickcheck_v1",
+  "proposal_alignment": "Adds predictive coding + linear probe + compute metrics",
+  "seed": 42,
+  "device_policy": "cuda_then_mps_then_cpu",
+  "data": {
+    "split": {
+      "train_episodes": 300,
+      "val_episodes": 80,
+      "test_episodes": 80
+    },
+    "grid_size_train": 8,
+    "grid_size_test": 8,
+    "obstacle_count": 1,
+    "observation_crop_size": 5,
+    "episode_horizon_min": 40,
+    "episode_horizon_max": 60,
+    "ood": {
+      "enabled": true,
+      "grid_size_test": 10,
+      "obstacle_count": 2,
+      "test_episodes": 80
+    }
+  },
+  "model": {
+    "embedding_size": 64,
+    "projection_size": 32,
+    "contrastive_temperature": 0.2
+  },
+  "ssl_augmentation": {
+    "max_shift_pixels": 2,
+    "brightness_jitter": 0.15,
+    "noise_std": 0.03
+  },
+  "train": {
+    "batch_size": 64,
+    "supervised_epochs": 3,
+    "rotation_ssl_pretrain_epochs": 6,
+    "contrastive_ssl_pretrain_epochs": 6,
+    "predictive_ssl_pretrain_epochs": 6,
+    "linear_probe_epochs": 3,
+    "fine_tune_epochs": 4,
+    "learning_rate_supervised": 0.001,
+    "learning_rate_ssl": 0.001,
+    "learning_rate_linear_probe": 0.001,
+    "learning_rate_fine_tune_encoder": 0.0005,
+    "learning_rate_fine_tune_head": 0.001
+  }
+}
